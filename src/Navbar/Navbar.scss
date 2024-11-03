@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+//font-family//
+:root{
+    //All Project Colors //
+    --primaryColor:#3959d7;
+    --primaryColorLight:hsl(223, 100%, 97%);
+    --primaryColorDark:hsl(216, 58%, 28%);
+    --gradientLight:rgb(114, 145, 255);
+    --fromColor:hsl(20, 42%, 87%);
+    --bgColor:hsl(0, 0%, 100%);
+    --whiteColor:hsl(240, 25%, 97%);
+    --blackColor:hsl(0, 0%, 18%);
+    --blackColorLight:hsl(233, 3%, 51%);
+    --shadowColor:hsl(219, 63%,95%);
+    --inputColor:hsl(330, 12%, 97%);
+    --cardColor:hsl(300, 3%, 94%);
+    --orangeColor:hsl(25, 84%, 53%);
+    //All Project Font Size //
+    --biggestFontSize:2.5rem;
+    --h1FontSize:1.6rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRedius:10px;
+}
+//المتغيرات الثابتة //
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    background: transparent;
+    z-index: 1000;
+    width: 100%;
+}
+.scroll-Navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.IogoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon{
+        color: var(--whiteColor);//
+        margin-right: .5rem;
+    }
+}
+span{
+        color: var(--whiteColor);
+        font-size: var(--h2FontSize);
+        font-weight: 500;
+}
+@media screen and (max-width:767px){
+    .menu{
+        position: absolute;
+        width: 70%;
+        top: -100rem;
+        right: 50%;
+        left: 50%;transform: translate(-50%);
+        background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+        padding: 2rem;
+        border-radius: var(--borderRedius);
+        transition: .8s ease-in-out;
+        box-shadow: 0 2px 25px -5px var(--shadowColor);
+    }
+    li{
+        font-size: var(--h3FontSize);
+        font-weight: 500;
+        padding: 1rem 0;
+        text-align: center;
+        color: var(--whiteColor);
+        cursor: pointer;
+        &:hover{
+            color: var(--primaryColorLight);
+            border-bottom: 1PX solid var(--primaryColorLight);
+        }
+    }
+    .menuIcon, .closeIcon{
+        color: var(--whiteColor);
+        font-size: var(--h1FontSize);
+        &:hover{
+            color: var(--primaryColorDark);
+        }
+    }
+    .closeIcon{
+        position: absolute;
+        bottom: -25px;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        background: linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198));
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px  var(--shadowColor);
+    }
+    .showNavbar{
+        top: 8rem;
+    }
+}
+.addBackground{
+    background: var(--whiteColor);
+    transition: .5s ease;
+    .IogoDiv{
+        .icon, span{
+            color: var(--primaryColorDark);
+        }
+    }
+    .menuIcon{
+        color: var(--primaryColorDark);
+    }
+}

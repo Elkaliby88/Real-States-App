@@ -1,0 +1,128 @@
+:root{
+    //All Project Colors //
+    --primaryColor:#3959d7;
+    --primaryColorLight:hsl(223, 100%, 97%);
+    --primaryColorDark:hsl(216, 58%, 28%);
+    --gradientLight:rgb(114, 145, 255);
+    --fromColor:hsl(20, 42%, 87%);
+    --bgColor:hsl(0, 0%, 100%);
+    --whiteColor:hsl(240, 25%, 97%);
+    --blackColor:hsl(0, 0%, 18%);
+    --blackColorLight:hsl(233, 3%, 51%);
+    --shadowColor:hsl(219, 63%,95%);
+    --inputColor:hsl(330, 12%, 97%);
+    --cardColor:hsl(300, 3%, 94%);
+    --orangeColor:hsl(25, 84%, 53%);
+    //All Project Font Size //
+    --biggestFontSize:2rem;
+    --h1FontSize:1.6rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:0.938rem;
+    --smallFontSize:0.813rem;
+    --smallestFontSize:0.75rem;
+    --borderRedius:10px;
+}
+.Listing{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    .secContainer{
+        .secHeader{
+            text-align: center;
+            .btns{
+                margin-bottom: 1.5rem;
+                gap: 1rem;
+                justify-content: center;
+                .btn{
+                    border: 2px solid var(--primaryColorDark);
+                    background: none;
+                    color: var(--primaryColorDark);
+                    font-weight: 500;
+                    &:hover{
+                        background:var(--primaryColor);
+                        border: 2px solid transparent;
+                        color: var(--whiteColor);
+                    }
+                }
+                .active{
+                    background:var(--primaryColor);
+                        border: 2px solid transparent;
+                        color: var(--whiteColor);
+                }
+            }
+        }
+        .secContent{
+            .singleListing{
+                display: grid;
+                border-radius: var(--borderRedius);
+                padding: 6px;
+                gap: 0.5rem;
+                overflow: hidden;
+                &:hover{
+                    box-shadow: 0 4px 6px var(--shadowColor);
+                    .imgDiv{
+                        img{
+                            scale: 1.1;
+                        transition: .3s ease-in-out;
+                        }
+                    }
+                }
+                .imgDiv{
+                    height: 200px;
+                    width: 100%;
+                    border-radius: var(--borderRedius);
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .info{
+                    padding: 0.5rem 0.5rem 0;
+                    .price{
+                        font-size: var(--h3FontSize);
+                        display: block;
+                        font-weight: 600;
+                        padding: .5rem 0;
+                        .digits{
+                            color: var(--primaryColorDark);
+                        }
+                        .duration{
+                            color: var(--primaryColorDark);
+                            font-weight: 500;
+                        }
+                    }
+                    .name{
+                        display: block;
+                        font-size: var(--h2FontSize);
+                        font-weight: 700;
+                        color: var(--primaryColorDark);
+                    }
+                    p{
+                        font-size: var(--normalFontSize);
+                        color: var(--primaryColorDark);
+                        opacity: .7;
+                        line-height: 20px;
+                        border-bottom: 2px solid rgb(235, 238, 242);
+                        padding-bottom: 1rem;
+                    }
+                    .ammenities{
+                        padding: 1rem 0;
+                        gap: 1rem;
+                        .flex{
+                            gap: 0.5rem;
+                            .icon{
+                                color: var(--orangeColor);
+                            }
+                            blockquote{
+                                color: var(--blackColor);
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
